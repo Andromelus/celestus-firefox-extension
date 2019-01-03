@@ -10,8 +10,7 @@
   window.hasRun = true;
 
   function getCelestusCodeInputs() {
-    var frame = parent.frames["Interface"];
-    console.log(window[0]);
+    var frame = window[0].frames;
     var CodeA = frame.document.getElementById("CodeA");
     var CodeB = frame.document.getElementById("CodeB");
     var CodeC = frame.document.getElementById("CodeC");
@@ -27,12 +26,15 @@
       inputCodes.push(CodeC);
       inputCodes.push(CodeD);
       inputCodes.push(CodeE);
+      console.log(inputCodes + " return getinput");
       return inputCodes;
     }
   }
 
   function fillCode(code, inputCodes) {
-    for(let i = 0; i < inputDocElements.length; i++) {
+    console.log("hello?");
+    for(let i = 0; i < inputCodes.length; i++) {
+      console.log(code[i] + " " +inputCodes[i])
       inputCodes[i].value = code[i];
     }
   }

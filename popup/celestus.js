@@ -34,7 +34,7 @@ function listenForClicks() {
     * Get the active tab,
     * then call "beastify()" or "reset()" as appropriate.
     */
-    if (e.target.classList.contains("reset")) {
+    if (e.target.classList.contains("fill")) {
       browser.tabs.query({ active: true, currentWindow: true })
         .then(fillCode)
         .catch(reportError);

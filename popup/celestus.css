@@ -14,16 +14,8 @@ html, body {
     cursor: pointer;
   }
   
-  .beast:hover {
-    background-color: #CFF2F2;
-  }
-  
-  .beast {
-    background-color: #E5F2F2;
-  }
-  
-  .reset {
-    background-color: #FBFBC9;
+  .fill {
+    background-color: #0d4660;
   }
   
   .reset:hover {
