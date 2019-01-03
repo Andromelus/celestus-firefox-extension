@@ -26,15 +26,12 @@
       inputCodes.push(CodeC);
       inputCodes.push(CodeD);
       inputCodes.push(CodeE);
-      console.log(inputCodes + " return getinput");
       return inputCodes;
     }
   }
 
   function fillCode(code, inputCodes) {
-    console.log("hello?");
     for(let i = 0; i < inputCodes.length; i++) {
-      console.log(code[i] + " " +inputCodes[i])
       inputCodes[i].value = code[i];
     }
   }

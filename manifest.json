@@ -1,7 +1,7 @@
 {
 
     "manifest_version": 2,
-    "name": "Celestus",
+    "name": "Celestus tools",
     "version": "1.0",
   
     "description": "Adds tools to ease actions in celestus",
@@ -18,10 +18,5 @@
       "default_icon": "icons/celestus-48.png",
       "default_title": "Celestus",
       "default_popup": "popup/celestus.html"
-    },
-  
-    "web_accessible_resources": [
-
-    ]
-  
+    }  
   }
