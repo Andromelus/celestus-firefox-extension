@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="celestus.css"/>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="celestus.css" />
+</head>
 
 <body>
   <div id="popup-content">
-    <input type="text" id="inputCode" value="">
-    <div class="button fill">Remplir</div>
+
+    <details>
+      <summary>Portes</summary>
+      <p>Porte destination</p>
+      <input type="text" id="inputCodeDestination" value="" placeholder="Code porte destination">
+      <div id="inputButtonDestination" class="fillDestination">Remplir</div>
+      <br>
+      <p>Cible disruption</p>
+      <input type="text" id="inputCodeTarget" value="" placeholder="Code porte cible">
+      <p>Aléatoire? <input id="random" type="checkbox"></p>
+      <div id="inputButtonTarget" class="fillTarget">Remplir</div>
+    </details>
   </div>
 
 
   <div id="error-content" class="hidden">
-    <p>Can't beastify this web page.</p><p>Try a different page.</p>
+    <p>Can't beastify this web page.</p>
+    <p>Try a different page.</p>
   </div>
   <script src="celestus.js"></script>
 </body>
