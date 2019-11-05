@@ -32,11 +32,10 @@
 
   // index used because Véo used similar ids in same page.
   // 0 = not random disrup ||| 1 = random disrup
-  function getDisruptionCodeInputs(random) {
-    console.log("Random disruption: " + random);
+  function getDisruptionCodeInputs(random, dg) {
     let frame = window[0].frames;
     let index;
-    random == false ? index = 0 : index = 1;
+    random == false ? (dg == false ? index = 0 : index = 2) : index = 1;
     let CodeA = frame.document.getElementsByName("CodeA")[index];
     let CodeB = frame.document.getElementsByName("CodeB")[index];
     let CodeC = frame.document.getElementsByName("CodeC")[index];
@@ -44,7 +43,7 @@
     let CodeE = frame.document.getElementsByName("CodeE")[index];
     if (CodeA == null || CodeB == null || CodeC == null || CodeD == null || CodeE == null) {
       console.log("Disruption: impossible de trouver les inputs de code.");
-      alert("Erreur: impossible de trouver les inputs de code porte. (disruption)")
+      alert("Erreur: impossible de trouver les inputs de code porte. (disruption) index = " + index);
     } else {
       var inputCodes = [];
       inputCodes.push(CodeA);
@@ -72,7 +71,7 @@
     if (message.command === "fillCodeDestination") {
       fillCodeDestination(message.code, getCelestusCodeInputs());
     } else if (message.command === "fillCodeTarget") {
-      fillCodeTarget(message.code, getDisruptionCodeInputs(message.random));
+      fillCodeTarget(message.code, getDisruptionCodeInputs(message.random, message.dg));
     }
   });
 

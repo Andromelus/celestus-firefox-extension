@@ -1,3 +1,17 @@
+
+document.getElementById("random").addEventListener("change", () => {
+  if (document.getElementById("random").checked && document.getElementById("dg").checked){
+    document.getElementById("dg").checked = false;
+  }
+  
+});
+document.getElementById("dg").addEventListener("change", () => {
+  if (document.getElementById("dg").checked && document.getElementById("random").checked){
+    document.getElementById("random").checked = false;
+  }
+});
+
+
 /**
 * Listen for clicks on the buttons, and send the appropriate message to
 * the content script in the page.
@@ -18,7 +32,8 @@ function listenForClicks() {
       browser.tabs.sendMessage(tabs[0].id, {
         command: "fillCodeTarget",
         code: splitCode(document.getElementById("inputCodeTarget").value),
-        random: document.getElementById("random").checked
+        random: document.getElementById("random").checked,
+        dg: document.getElementById("dg").checked
       });
     }
 
@@ -30,12 +45,12 @@ function listenForClicks() {
     * Just log the error to the console.
     */
     function reportError(error) {
-      console.error(`Could not beastify: ${error}`);
+      console.error(`${error}`);
     }
 
     /**
     * Get the active tab,
-    * then call "beastify()" or "reset()" as appropriate.
+    * then call "fillCodeDestination()" or "fillCodeDestination()" as appropriate.
     */
     if (e.target.classList.contains("fillDestination")) {
       browser.tabs.query({ active: true, currentWindow: true })
@@ -57,7 +72,7 @@ function listenForClicks() {
 function reportExecuteScriptError(error) {
   document.querySelector("#popup-content").classList.add("hidden");
   document.querySelector("#error-content").classList.remove("hidden");
-  console.error(`Failed to execute beastify content script: ${error.message}`);
+  console.error(`Failed to execute celestus content script: ${error.message}`);
 }
 
 /**
