@@ -2,12 +2,12 @@
 
     "manifest_version": 2,
     "name": "Celestus tools",
-    "version": "1.0",
+    "version": "2.0",
   
     "description": "Adds tools to ease actions in celestus",
     "homepage_url": "https://github.com/floriancastelain/celestus-firefox-extension",
     "icons": {
-      "48": "icons/celestus-48.png"
+      "48": "icons/androgiciel-48.png"
     },
   
     "permissions": [
@@ -15,7 +15,7 @@
     ],
   
     "browser_action": {
-      "default_icon": "icons/celestus-48.png",
+      "default_icon": "icons/androgiciel-48.png",
       "default_title": "Celestus",
       "default_popup": "popup/celestus.html"
     }  
