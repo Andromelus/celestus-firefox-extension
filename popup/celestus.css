@@ -41,3 +41,10 @@ html, body {
     width: 100px;
 
   }
+
+  #tsuYear{
+    width: 100px;
+  }
+  #dates{
+    border: 1px black;
+  }

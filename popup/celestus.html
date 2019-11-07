@@ -22,6 +22,79 @@
       <p>DG?<input id="dg" type="checkbox"></p>
       <div id="inputButtonTarget" class="fillTarget">Remplir</div>
     </details>
+<br>
+    <details id="dates">
+      <summary>Dates</summary>
+      <h3>Date actuelle</h3>
+      <p id="currentTsuDate"></p>
+
+      <h3>IRL -> TSU</h3>
+      <input type="date" id="irlDate">
+      <input type="time" id="irlTime">
+      <button id="irlToTsu">Convertir</button>
+      <p id="tsuConvertedDate"></p>
+
+      <h3>TSU -> IRL</h3>
+      <p>Jour - Mois - Années</p>
+      <select id="tsuDay" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
+        <option value="34">34</option>
+        <option value="35">35</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+      </select>
+      <select id="tsuMonth" >
+        <option value="1">Onovahn</option>
+        <option value="2">Celetahn</option>
+        <option value="3">Feloahn</option>
+        <option value="4">Koylahn</option>
+        <option value="5">Jileahn</option>
+        <option value="6">Dolahn</option>
+        <option value="7">Stelahn</option>
+        <option value="8">Pookahn</option>
+        <option value="9">Volahn</option>
+        <option value="10">Erehahn</option>
+      </select>
+      
+      <input id="tsuYear" type="number" value="18000">
+      <button id="tsuToIrl">Convertir</button>
+      <p id="irlConvertedDate"></p>
+    </details>
   </div>
 
 
