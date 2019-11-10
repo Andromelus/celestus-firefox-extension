@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Celestus tools",
-    "version": "2.0",
+    "version": "3.0",
   
     "description": "Adds tools to ease actions in celestus",
     "homepage_url": "https://github.com/floriancastelain/celestus-firefox-extension",
