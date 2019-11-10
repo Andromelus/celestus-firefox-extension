@@ -1,4 +1,3 @@
-
 document.getElementById("random").addEventListener("change", () => {
   if (document.getElementById("random").checked && document.getElementById("dg").checked) {
     document.getElementById("dg").checked = false;
@@ -35,22 +34,22 @@ document.getElementById("dates").addEventListener("toggle", () => {
 
 document.getElementById("irlToTsu").addEventListener("click", () => {
   let irlDate = new Date(document.getElementById("irlDate").value)
-  console.log(irlDate);
-  let timestamp = irlDate.getTime() / 1000;
-  let splitTime = document.getElementById("irlTime").value.split(":");
- /*  console.log(timestamp);
-  //add seconds to timestamp
-  timestamp+=splitTime[1] * 1000;
+  console.log(irlDate.getTime());
+  let timestamp = (irlDate.getTime() / 1000);
+ /*  let splitTime = document.getElementById("irlTime").value.split(":");
   console.log(timestamp);
-  */
-
-  //add hours to timestamp
-  timestamp+=splitTime[0]*36000;
-  console.log(timestamp); 
+  //add seconds to timestamp
+  timestamp += parseInt(splitTime[1]);
+  console.log(timestamp);
+  // add hours to timestamp
+  timestamp += parseInt(splitTime[0]) * 3600;
+  console.log(timestamp); */
   let tsu = timestampToTsu(timestamp);
   document.getElementById("tsuConvertedDate").innerText = tsu[2] + " " + tsuMonthList[tsu[1] - 1] + "[" + tsu[1] + "] de l'an " + tsu[0] + " tsu";
 });
 
+1573257600
+157325760045
 document.getElementById("tsuToIrl").addEventListener("click", () => {
   let tsuDay = document.getElementById("tsuDay").value - 1;
   let tsuMonth = document.getElementById("tsuMonth").value - 1;
